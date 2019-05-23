@@ -86,7 +86,7 @@ public class PetServiceTest {
 	public void testFindPetByOwnerId() {
 
 		int OWNER_ID = 10;
-		int SIZE_EXPECTED = 2;
+		int SIZE_EXPECTED = 3;
 
 		List<Pet> pets = petService.findByOwnerId(OWNER_ID);
 
