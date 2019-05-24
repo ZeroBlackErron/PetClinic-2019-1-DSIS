@@ -49,7 +49,7 @@ public class OwnerServiceTest {
 	}
 	
 	@Test
-	public void testFindByAddress() {
+	public void testFindByCity() {
 		String OWNER_CITY = "Sun Prairie";
 		Owner owner;
 		List<Owner> owners = ownerService.findByCity(OWNER_CITY);
@@ -60,9 +60,9 @@ public class OwnerServiceTest {
 	}
 	
 	//Antes de ejecutar esta prueba, crear un registro simple y cambiar el valor de OWNER_ID.
-	//@Test
+	@Test
 	public void testDelete() throws OwnerNotFoundException {
-		Long OWNER_ID = 14L;//<== cambiarlo por el codigo de registro que creó
+		Long OWNER_ID = 15L;//<== cambiarlo por el codigo de registro que creó
 		
 		ownerService.delete(OWNER_ID);
 		
@@ -85,7 +85,7 @@ public class OwnerServiceTest {
 		
 		try {
 			Owner ownerCreatedFound = ownerService.findById(ownerCreated.getId());
-			logger.info("Owner with id: "+ ownerCreatedFound.getId() + " has created.");
+			logger.info("Owner with id: "+ ownerCreatedFound.getId() + " created.");
 		}catch (OwnerNotFoundException e) {
 			logger.info("Owner had no created.");
 		}
