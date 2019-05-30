@@ -62,7 +62,7 @@ public class OwnerServiceTest {
 	//Antes de ejecutar esta prueba, crear un registro simple y cambiar el valor de OWNER_ID.
 	@Test
 	public void testDelete() throws OwnerNotFoundException {
-		Long OWNER_ID = 21L;//<== cambiarlo por el codigo de registro que creó
+		Long OWNER_ID = 16L;//<== cambiarlo por el codigo de registro que creó
 		
 		ownerService.delete(OWNER_ID);
 		
