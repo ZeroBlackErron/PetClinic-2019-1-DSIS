@@ -62,7 +62,15 @@ public class OwnerServiceTest {
 	//Antes de ejecutar esta prueba, crear un registro simple y cambiar el valor de OWNER_ID.
 	@Test
 	public void testDelete() throws OwnerNotFoundException {
-		Long OWNER_ID = 17L;//<== cambiarlo por el codigo de registro que creó
+		String OWNER_FIRST_NAME = "Anthony";
+		String OWNER_LAST_NAME = "Rosado";
+		String OWNER_CITY = "Lima";
+		
+		Owner simpleOwner = new Owner(OWNER_FIRST_NAME, OWNER_LAST_NAME, OWNER_CITY);
+		
+		Owner ownerCreated = ownerService.create(simpleOwner);
+		
+		Long OWNER_ID = ownerCreated.getId();
 		
 		ownerService.delete(OWNER_ID);
 		
